@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { NoteListContainer } from "./Styles"
+import { ListNotes, NoteBody, NoteListContainer } from "./Styles"
+import ListItem from "../../components/ListItem/ListItem"
 
 const NotesListPage = () => {
 
@@ -12,13 +13,17 @@ const NotesListPage = () => {
 
    let getNotes = async () => {
       let response = await fetch('http://127.0.0.1:8000/api/notes/');
-      let data = await response.json();
+      let data = await response.json();      
       setNotes(data)
    }
 
   return (
     <NoteListContainer>
-        Notes
+        <ListNotes>
+         {notes.map((note, index) => (
+            <ListItem key={index} note={note} />
+         ))}
+        </ListNotes>
     </NoteListContainer>
   )
 }
