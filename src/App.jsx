@@ -20,9 +20,11 @@ const routes = createBrowserRouter([
 
 function App() {
   return (
-    <div className='App'>
+    <div className='container dark'>
+      <div className='app'>
       <Header />
       <RouterProvider router={routes} />
+      </div>
     </div>
   )
 }
