@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { ListNotes, NoteBody, NoteListContainer, NotesHeader, SubTitle } from "./Styles"
+import { ListNotes, NoteBody, NoteListContainer, NoteParagraph, NotesHeader, SubTitle } from "./Styles"
 import ListItem from "../../components/ListItem/ListItem"
 
 const NotesListPage = () => {
@@ -20,7 +20,8 @@ const NotesListPage = () => {
   return (
     <NoteListContainer>
       <NotesHeader>
-         <SubTitle>&#9782;</SubTitle>
+         <SubTitle>&#9782; Notes</SubTitle>
+         <NoteParagraph>{notes.length}</NoteParagraph>
       </NotesHeader>
         <ListNotes>
          {notes.map((note, index) => (

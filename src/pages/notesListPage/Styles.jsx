@@ -24,6 +24,15 @@ export const NotesHeader = styled.div`
 `
 
 export const SubTitle = styled.h2`
+    color: #f68657;
+    font-size: 24px;
+    font-weight: 600;
 
+`
+
+export const NoteParagraph = styled.p`
+    color: #f68657;
+    font-size: 24px;
+    font-weight: 600;
 
 `

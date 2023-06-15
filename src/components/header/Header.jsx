@@ -1,10 +1,11 @@
-import { Title } from "./Styles"
+import { HeaderContainer, Title } from "./Styles"
 
 const Header = () => {
   return (
-    <div>
-        <Title>App</Title>
-    </div>
+    <HeaderContainer>
+      <Title>Lista de Tarefas</Title>
+    </HeaderContainer>           
+    
   )
 }
 

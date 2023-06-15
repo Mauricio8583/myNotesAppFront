@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom"
-import { NotePageContainer, TextField, Title } from "./Styles"
+import { Link, useParams } from "react-router-dom"
+import { NoteHeader, NoteHeaderTitle, NotePageContainer, TextAreaContainer, TextField, Title } from "./Styles"
 import { useEffect, useState } from "react";
+import { ReactComponent as ArrowLeft } from "../../assets/left-arrow.svg";
 
 const NotePage = () => {
 
@@ -20,7 +21,10 @@ const NotePage = () => {
 
   return (
     <NotePageContainer>
-        <TextField>{note?.body}</TextField>
+        <NoteHeader>
+          <NoteHeaderTitle><Link to='/'><ArrowLeft /></Link></NoteHeaderTitle>          
+        </NoteHeader>
+        <TextAreaContainer defaultValue={note?.body} ></TextAreaContainer>
     </NotePageContainer>
   )
 }
