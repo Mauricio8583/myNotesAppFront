@@ -34,3 +34,19 @@ export const NoteHeaderTitle = styled.h3`
 
 
 `
+
+export const NoteDeleteButton = styled.button`
+  border: none;
+  outline: none;
+  width: 70px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background-color: #FF5733;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+
+`
