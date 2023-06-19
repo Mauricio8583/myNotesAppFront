@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { ListNotes, NoteBody, NoteListContainer, NoteParagraph, NotesHeader, SubTitle } from "./Styles"
 import ListItem from "../../components/ListItem/ListItem"
+import AddButton from "../../components/addButton/AddButton"
 
 const NotesListPage = () => {
 
@@ -20,7 +21,7 @@ const NotesListPage = () => {
   return (
     <NoteListContainer>
       <NotesHeader>
-         <SubTitle>&#9782; Notes</SubTitle>
+         <SubTitle>&#9782; Tarefas</SubTitle>
          <NoteParagraph>{notes.length}</NoteParagraph>
       </NotesHeader>
         <ListNotes>
@@ -28,6 +29,7 @@ const NotesListPage = () => {
             <ListItem key={index} note={note} />
          ))}
         </ListNotes>
+        <AddButton />
     </NoteListContainer>
   )
 }
